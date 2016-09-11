@@ -1,5 +1,7 @@
 package org.ftcTeam.opmodes;
 
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+
 import org.ftcbootstrap.ActiveOpMode;
 import org.ftcbootstrap.components.operations.motors.GamePadTankDrive;
 import org.ftcTeam.FTCTeamRobot;
@@ -12,6 +14,8 @@ import org.ftcTeam.FTCTeamRobot;
  * Summary:  Use an Operation class to perform a tank drive using the gamepad joysticks.
  * See: {@link GamePadTankDrive}
  */
+
+@TeleOp
 public class GamePadDriveOpMode extends ActiveOpMode {
 
     private FTCTeamRobot robot;
