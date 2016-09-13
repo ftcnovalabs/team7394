@@ -4,7 +4,10 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.ftcbootstrap.ActiveOpMode;
 import org.ftcbootstrap.components.operations.motors.GamePadTankDrive;
+import org.ftcbootstrap.components.operations.motors.GamePadMotor;
+import org.ftcbootstrap.components.operations.servos.GamePadClaw;
 import org.ftcTeam.FTCTeamRobot;
+import org.ftcbootstrap.components.operations.servos.GamePadServo;
 
 
 /**
@@ -20,6 +23,9 @@ public class GamePadDriveOpMode extends ActiveOpMode {
 
     private FTCTeamRobot robot;
     private GamePadTankDrive gamePadTankDrive;
+    private GamePadMotor armMotorStick;
+    private GamePadClaw claw;
+
 
     /**
      * Implement this method to define the code to run when the Init button is pressed on the Driver station.
@@ -42,6 +48,12 @@ public class GamePadDriveOpMode extends ActiveOpMode {
 
         //create the operation  to perform a tank drive using the gamepad joysticks.
         gamePadTankDrive = new GamePadTankDrive(this, gamepad1, robot.motor1, robot.motor2);
+
+
+        //armMotorStick = new GamePadMotor(this, gamepad1, robot.getLeftArm(), GamePadMotor.Control.UP_DOWN_BUTTONS);
+
+        //operate the claw with GamePadServo.Control. Use the X and B buttons for up and down and the  X and B buttons for left and right
+        claw = new GamePadClaw(this, gamepad1, robot.leftservo, robot.rightservo, GamePadServo.Control.X_B, 0.8);
 
     }
 

@@ -24,7 +24,8 @@ public class FTCTeamRobot extends RobotConfiguration {
     //motors
     public DcMotor motor1;
     public DcMotor motor2;
-    public Servo servo;
+    public Servo rightservo;
+    public Servo leftservo;
 
     /**
      * Factory method for this class
@@ -53,7 +54,10 @@ public class FTCTeamRobot extends RobotConfiguration {
         setTelemetry(telemetryUtil);
 
         touch = (TouchSensor) getHardwareOn("touch", hardwareMap.touchSensor);
-        servo = (Servo) getHardwareOn("servo", hardwareMap.servo);
+
+        leftservo = (Servo) getHardwareOn("leftservo", hardwareMap.servo);
+        rightservo = (Servo) getHardwareOn("rightservo", hardwareMap.servo);
+
         motor1 = (DcMotor) getHardwareOn("motor1", hardwareMap.dcMotor);
         motor2 = (DcMotor) getHardwareOn("motor2", hardwareMap.dcMotor);
         motor2.setDirection(DcMotor.Direction.REVERSE);
