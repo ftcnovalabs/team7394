@@ -19,12 +19,12 @@ import org.ftcbootstrap.components.utils.TelemetryUtil;
 public class FTCTeamRobot extends RobotConfiguration {
 
     //sensors
-    private TouchSensor touch;
+    public TouchSensor touch;
 
     //motors
-    private DcMotor motor1;
-    private DcMotor motor2;
-    private Servo servo;
+    public DcMotor motor1;
+    public DcMotor motor2;
+    public Servo servo;
 
     /**
      * Factory method for this class
@@ -59,36 +59,6 @@ public class FTCTeamRobot extends RobotConfiguration {
         motor2.setDirection(DcMotor.Direction.REVERSE);
 
 
-    }
-
-
-    /**
-     * @return TouchSensor
-     */
-    public TouchSensor getTouch() {
-        return touch;
-    }
-
-    /**
-     * @return Servo
-     */
-    public Servo getServo() {
-        return servo;
-    }
-
-
-    /**
-     * @return DcMotor
-     */
-    public DcMotor getMotor1() {
-        return motor1;
-    }
-
-    /**
-     * @return DcMotor
-     */
-    public DcMotor getMotor2() {
-        return motor2;
     }
 
 
