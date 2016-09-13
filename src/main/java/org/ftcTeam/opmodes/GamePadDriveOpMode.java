@@ -68,6 +68,7 @@ public class GamePadDriveOpMode extends ActiveOpMode {
 
         //update the motors with the gamepad joystick values
         gamePadTankDrive.update();
+        claw.update();
 
         //send any telemetry that may have been added in the above operations
         getTelemetryUtil().sendTelemetry();
