@@ -9,6 +9,7 @@ import org.ftcbootstrap.demos.pushbot.PushBotRegistry;
 import org.ftcbootstrap.demos.navbot.NavBotRegistry;
 
 import org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity;
+import org.teamSamples.novaboard.NovaboardRegistry;
 
 public class FTCTeamControllerActivity extends FtcRobotControllerActivity {
 
@@ -17,7 +18,9 @@ public class FTCTeamControllerActivity extends FtcRobotControllerActivity {
   protected OpModeRegister createOpModeRegister() {
 
 
-       return new FTCTeamRegistry();
+       //return new FTCTeamRegistry();
+
+        return new NovaboardRegistry();
 
        //return new NavBotRegistry();
 

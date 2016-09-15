@@ -23,9 +23,9 @@ public class NovaboardRobot extends RobotConfiguration {
 
     //motors
     public DcMotor motor1;
-    public DcMotor motor2;
-    public Servo rightservo;
-    public Servo leftservo;
+    public Servo servo1;
+    public Servo servo2;
+
 
     /**
      * Factory method for this class
@@ -53,15 +53,9 @@ public class NovaboardRobot extends RobotConfiguration {
 
         setTelemetry(telemetryUtil);
 
-        touch = (TouchSensor) getHardwareOn("touch", hardwareMap.touchSensor);
-
-        leftservo = (Servo) getHardwareOn("leftservo", hardwareMap.servo);
-        rightservo = (Servo) getHardwareOn("rightservo", hardwareMap.servo);
-
+        servo1 = (Servo) getHardwareOn("servo1", hardwareMap.servo);
+        servo2 = (Servo) getHardwareOn("servo2", hardwareMap.servo);
         motor1 = (DcMotor) getHardwareOn("motor1", hardwareMap.dcMotor);
-        motor2 = (DcMotor) getHardwareOn("motor2", hardwareMap.dcMotor);
-        motor2.setDirection(DcMotor.Direction.REVERSE);
-
 
     }
 
