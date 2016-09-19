@@ -1,29 +1,27 @@
-package org.teamSamples.novaboard;
+package org.ftcTeam.training;
 
+import org.ftcTeam.training.level1.*;
 import org.ftcbootstrap.BootstrapRegistrar;
 import org.ftcbootstrap.demos.TelemetryTest;
-import org.teamSamples.novaboard.opmodes.*;
-
 
 /**
  * Register Op Modes
  */
-public class NovaboardRegistry extends BootstrapRegistrar {
+public class TrainingBeginnerRegistrar extends BootstrapRegistrar {
 
 
   protected Class[] getOpmodeClasses() {
     Class[] classes = {
 
-            GamePadControls.class,
-            GamePadControls2.class,
+            GamePadMotorAndServo.class,
             RunMotorForTime.class,
-            RunMotorUntilTouch.class,
+            MoveServoToPosition.class,
+            RunMotorToEncoderTarget.class,
             TelemetryTest.class
 
     };
 
     return classes;
+
   }
-
-
 }

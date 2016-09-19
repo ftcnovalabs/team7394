@@ -1,11 +1,11 @@
-package org.teamSamples.novaboard.opmodes;
+package org.ftcTeam.opmodes.novaboard;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 import org.ftcbootstrap.ActiveOpMode;
 import org.ftcbootstrap.components.operations.motors.GamePadTankDrive;
-import org.teamSamples.novaboard.NovaboardRobot;
+import org.ftcTeam.configurations.NovaboardRobot;
 
 /**
  * Use a single  gamepad's joysticks to Tank Drive

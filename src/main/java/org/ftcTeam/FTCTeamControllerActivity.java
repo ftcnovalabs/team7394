@@ -2,14 +2,8 @@ package org.ftcTeam;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpModeRegister;
 
-import org.ftcbootstrap.demos.beginner.MyFirstBotRegistry;
-import org.ftcbootstrap.demos.demobot.DemoBotRegistry;
-import org.ftcbootstrap.demos.onemc.OneMCRegistry;
-import org.ftcbootstrap.demos.pushbot.PushBotRegistry;
-import org.ftcbootstrap.demos.navbot.NavBotRegistry;
-
 import org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity;
-import org.teamSamples.novaboard.NovaboardRegistry;
+import org.ftcTeam.opmodes.NovaboardRegistrar;
 
 public class FTCTeamControllerActivity extends FtcRobotControllerActivity {
 
@@ -18,11 +12,12 @@ public class FTCTeamControllerActivity extends FtcRobotControllerActivity {
   protected OpModeRegister createOpModeRegister() {
 
 
-       //return new FTCTeamRegistry();
+      //return new Registrar1();
+      //return new Registrar2();
+      //return new TrainingBeginnerRegistrar();
 
-        return new NovaboardRegistry();
+      return new NovaboardRegistrar();
 
-       //return new NavBotRegistry();
 
 
   }

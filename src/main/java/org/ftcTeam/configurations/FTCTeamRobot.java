@@ -1,4 +1,4 @@
-package org.teamSamples.novaboard;
+package org.ftcTeam.configurations;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -9,25 +9,22 @@ import org.ftcbootstrap.RobotConfiguration;
 import org.ftcbootstrap.components.utils.TelemetryUtil;
 
 /**
- * NovaboardRobot Saved Configuration
+ * FTCTeamRobot Saved Configuration
  * <p/>
  * It is assumed that there is a configuration on the phone running the Robot Controller App with the same name as this class and
  * that  configuration is the one that is marked 'activated' on the phone.
  * It is also assumed that the device names in the 'init()' method below are the same  as the devices named for the
  * saved configuration on the phone.
  */
-public class NovaboardRobot extends RobotConfiguration {
+public class FTCTeamRobot extends RobotConfiguration {
 
     //sensors
-    public TouchSensor touch1;
-
+    public TouchSensor touch;
 
     //motors
     public DcMotor motor1;
     public DcMotor motor2;
-    public Servo servo1;
-    public Servo servo2;
-
+    public Servo servo;
 
     /**
      * Factory method for this class
@@ -36,9 +33,9 @@ public class NovaboardRobot extends RobotConfiguration {
      * @param telemetryUtil
      * @return
      */
-    public static NovaboardRobot newConfig(HardwareMap hardwareMap, TelemetryUtil telemetryUtil) {
+    public static FTCTeamRobot newConfig(HardwareMap hardwareMap, TelemetryUtil telemetryUtil) {
 
-        NovaboardRobot config = new NovaboardRobot();
+        FTCTeamRobot config = new FTCTeamRobot();
         config.init(hardwareMap, telemetryUtil);
         return config;
 
@@ -55,16 +52,16 @@ public class NovaboardRobot extends RobotConfiguration {
 
         setTelemetry(telemetryUtil);
 
-
-        touch1 = (TouchSensor) getHardwareOn("touch1", hardwareMap.touchSensor);
-
-        servo1 = (Servo) getHardwareOn("servo1", hardwareMap.servo);
-        servo2 = (Servo) getHardwareOn("servo2", hardwareMap.servo);
+        touch = (TouchSensor) getHardwareOn("touch", hardwareMap.touchSensor);
+        servo = (Servo) getHardwareOn("servo", hardwareMap.servo);
         motor1 = (DcMotor) getHardwareOn("motor1", hardwareMap.dcMotor);
         motor2 = (DcMotor) getHardwareOn("motor2", hardwareMap.dcMotor);
         motor2.setDirection(DcMotor.Direction.REVERSE);
 
+
     }
+
+
 
 
 }

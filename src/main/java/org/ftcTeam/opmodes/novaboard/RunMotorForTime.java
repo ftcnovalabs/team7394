@@ -1,10 +1,10 @@
-package org.teamSamples.novaboard.opmodes;
+package org.ftcTeam.opmodes.novaboard;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import org.ftcbootstrap.ActiveOpMode;
 import org.ftcbootstrap.components.operations.motors.MotorToTime;
 import org.ftcbootstrap.demos.beginner.MyFirstBot;
-import org.teamSamples.novaboard.NovaboardRobot;
+import org.ftcTeam.configurations.NovaboardRobot;
 
 /**
  * Note: This Exercise assumes that you have used your Robot Controller App to "scan" your hardware and

@@ -1,17 +1,25 @@
-package org.teamSamples.novaboard.opmodes;
+package org.ftcTeam.training.level1;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+import org.ftcTeam.configurations.MotorAndServoRobot;
 import org.ftcbootstrap.ActiveOpMode;
 import org.ftcbootstrap.components.operations.motors.GamePadMotor;
 import org.ftcbootstrap.components.operations.servos.GamePadServo;
-import org.teamSamples.novaboard.NovaboardRobot;
 
+
+/**
+ * Note:  It is assumed that the proper registrar is used for this set of demos. To confirm please
+ * search for "Enter your custom registrar"  in  {@link org.ftcTeam.FTCTeamControllerActivity}
+ * <p/>
+ */
 
 @TeleOp
-public class GamePadControls extends ActiveOpMode {
+public class GamePadMotorAndServo extends ActiveOpMode {
 
-    private NovaboardRobot robot;
+    private MotorAndServoRobot robot;
+
+
     private GamePadMotor motorFromStick;
     private GamePadServo yaServo;
     private GamePadServo xbServo;
@@ -22,7 +30,7 @@ public class GamePadControls extends ActiveOpMode {
     @Override
     protected void onInit() {
 
-        robot = NovaboardRobot.newConfig(hardwareMap, getTelemetryUtil());
+        robot = MotorAndServoRobot.newConfig(hardwareMap, getTelemetryUtil());
 
         //Note The Telemetry Utility is designed to let you organize all telemetry data before sending it to
         //the Driver station via the sendTelemetry command
@@ -37,10 +45,8 @@ public class GamePadControls extends ActiveOpMode {
 
         motorFromStick = new GamePadMotor(this,  gamepad1, robot.motor1, GamePadMotor.Control.LEFT_STICK_Y);
 
-        //operate the claw with GamePadServo.Control. Use the X and B buttons for up and down and the  X and B buttons for left and right
-        //claw = new GamePadClaw(this, gamepad1, robot.leftservo, robot.rightservo, GamePadServo.Control.X_B, 0.8);
-        yaServo = new GamePadServo(this,gamepad1,robot.servo1, GamePadServo.Control.Y_A , 0.0 );
-        xbServo = new GamePadServo(this,gamepad1,robot.servo2, GamePadServo.Control.X_B , 0.0 );
+        double initialPosition = 0.3;
+        yaServo = new GamePadServo(this,gamepad1,robot.servo1, GamePadServo.Control.Y_A , initialPosition );
 
     }
 
@@ -53,10 +59,10 @@ public class GamePadControls extends ActiveOpMode {
     @Override
     protected void activeLoop() throws InterruptedException {
 
-        //update the motors with the gamepad joystick values
+        //update the motor with the gamepad joystick values
         motorFromStick.update();
+        //update the servo with the gamepad y/a button values
         yaServo.update();
-        xbServo.update();
 
         //send any telemetry that may have been added in the above operations
         getTelemetryUtil().sendTelemetry();

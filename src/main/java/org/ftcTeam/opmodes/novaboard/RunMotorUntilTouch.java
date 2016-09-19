@@ -1,12 +1,10 @@
-package org.teamSamples.novaboard.opmodes;
+package org.ftcTeam.opmodes.novaboard;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
 import org.ftcbootstrap.ActiveOpMode;
 import org.ftcbootstrap.components.operations.motors.MotorToTouch;
-import org.ftcbootstrap.demos.beginner.MyFirstBot;
-import org.ftcbootstrap.demos.beginner.opmodes.OpMode3RunForTime;
-import org.teamSamples.novaboard.NovaboardRobot;
+import org.ftcTeam.configurations.NovaboardRobot;
 
 @Autonomous
 public class RunMotorUntilTouch extends ActiveOpMode {
