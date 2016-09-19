@@ -2,8 +2,7 @@ package org.teamSamples.novaboard;
 
 import org.ftcbootstrap.BootstrapRegistrar;
 import org.ftcbootstrap.demos.TelemetryTest;
-import org.teamSamples.novaboard.opmodes.GamePadControls;
-import org.teamSamples.novaboard.opmodes.RunMotorForTime;
+import org.teamSamples.novaboard.opmodes.*;
 
 
 /**
@@ -16,7 +15,9 @@ public class NovaboardRegistry extends BootstrapRegistrar {
     Class[] classes = {
 
             GamePadControls.class,
+            GamePadControls2.class,
             RunMotorForTime.class,
+            RunMotorUntilTouch.class,
             TelemetryTest.class
 
     };

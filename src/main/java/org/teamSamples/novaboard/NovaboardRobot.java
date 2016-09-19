@@ -19,10 +19,12 @@ import org.ftcbootstrap.components.utils.TelemetryUtil;
 public class NovaboardRobot extends RobotConfiguration {
 
     //sensors
-    public TouchSensor touch;
+    public TouchSensor touch1;
+
 
     //motors
     public DcMotor motor1;
+    public DcMotor motor2;
     public Servo servo1;
     public Servo servo2;
 
@@ -53,9 +55,14 @@ public class NovaboardRobot extends RobotConfiguration {
 
         setTelemetry(telemetryUtil);
 
+
+        touch1 = (TouchSensor) getHardwareOn("touch1", hardwareMap.touchSensor);
+
         servo1 = (Servo) getHardwareOn("servo1", hardwareMap.servo);
         servo2 = (Servo) getHardwareOn("servo2", hardwareMap.servo);
         motor1 = (DcMotor) getHardwareOn("motor1", hardwareMap.dcMotor);
+        motor2 = (DcMotor) getHardwareOn("motor2", hardwareMap.dcMotor);
+        motor2.setDirection(DcMotor.Direction.REVERSE);
 
     }
 
