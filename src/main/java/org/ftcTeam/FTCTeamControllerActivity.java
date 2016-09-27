@@ -2,8 +2,10 @@ package org.ftcTeam;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpModeRegister;
 
+
+import org.ftcbootstrap.components.phone.AccelerometerComponent;
 import org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity;
-import org.ftcTeam.opmodes.NovaboardRegistrar;
+import org.ftcTeam.opmodes.*;
 
 public class FTCTeamControllerActivity extends FtcRobotControllerActivity {
 
@@ -14,8 +16,6 @@ public class FTCTeamControllerActivity extends FtcRobotControllerActivity {
 
       //return new Registrar1();
       //return new Registrar2();
-      //return new TrainingBeginnerRegistrar();
-
       return new NovaboardRegistrar();
 
 
